@@ -2,7 +2,9 @@
 package tap;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -39,7 +41,9 @@ public class TAP extends JFrame{
         JPanel fileJPanel = new JPanel();
     	fileJPanel.setLayout(new FlowLayout());
         JLabel lblFile = new JLabel( "Nombre de Archivo de texto:" );
-        fileJPanel.add(lblFile);
+        lblFile.setFont(new Font ("Calibri",Font.BOLD,18));
+       lblFile.setForeground(Color.GRAY);
+       fileJPanel.add(lblFile);
         txtFile = new JTextField(20);
         fileJPanel.add(txtFile);
         add(fileJPanel, BorderLayout.NORTH);
